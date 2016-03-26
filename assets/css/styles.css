@@ -1,0 +1,131 @@
+@CHARSET "UTF-8";
+@font-face {
+    font-family: 'socicon';
+    src: url('fonts/socicon.eot');
+    src: url('fonts/socicon.eot?#iefix') format('embedded-opentype'),
+         url('fonts/socicon.woff') format('woff'),
+         url('fonts/socicon.woff2') format('woff2')
+         url('fonts/socicon.ttf') format('truetype'),
+         url('fonts/socicon.svg#sociconregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    text-transform: initial;
+}
+body{
+	font-weight: 400;
+	background-color: #D9D9E1;
+}
+.alert {
+    transition: 1s linear all;
+     opacity: 1;
+}
+.alert.ng-hide {
+     opacity: 0;
+}
+
+.alert.ng-show {
+     opacity: 1;
+}
+
+.bs-docs-header {
+    box-sizing: border-box;
+    color: rgb(129, 181, 221);
+    height: 175px;
+    position: relative;
+    text-align: left;
+    text-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 0px;
+    perspective-origin: 950.5px 128px;
+    transform-origin: 950.5px 128px;
+    background-color: #373743;
+    border: 0px none rgb(205, 191, 227);
+    font: normal normal normal normal 24px/34.2857170104981px 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0px 0px 2px;
+    outline: rgb(205, 191, 227) none 0px;
+    padding: 0px 15px;
+}
+.second-header {
+    box-sizing: border-box;
+    height: 8px;
+    position: relative;
+    perspective-origin: 950.5px 128px;
+    transform-origin: 950.5px 128px;
+    background-color: #0D9681;
+    border: 0px none rgb(205, 191, 227);
+    margin: 0px 0px 6px;
+    outline: rgb(205, 191, 227) none 0px;
+    padding: 0px 6px;
+}
+.bs-docs-header .header{
+    background: url(../img/cloud.png) no-repeat left;
+    box-sizing: border-box;
+    margin-left:0px;
+    height: 141px;
+}
+.bs-docs-header h1 {
+    color: #17B198;
+    height: 45px;
+    text-align: left;
+	text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.64);
+    border: 0px none rgb(255, 255, 255);
+    font-size: normal normal 500 normal 60px/60px 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-variant: small-caps;
+    outline: rgb(255, 255, 255) none 0px;
+    padding-left :140px;
+    padding-top: 25px;
+}
+
+.bs-docs-header p{
+    color: #F0F1F1;
+    font-weight: 200;
+	font-size: 18px;
+	font-stretch: ultra-expanded;
+	text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.24);
+	font-variant: small-caps;
+    padding-left :140px;
+}
+.navbar{
+	margin-bottom: 1px!important;
+	border-radius: 0px!important;
+}
+.td-center{
+	text-align: center;
+}
+
+@font-face {
+	font-family: 'Pe-icon-social';
+	src:url('fonts/Pe-icon-social.eot?-96eskg');
+	src:url('fonts/Pe-icon-social.eot?#iefix-96eskg') format('embedded-opentype'),
+		url('fonts/Pe-icon-social.woff?-96eskg') format('woff'),
+		url('fonts/Pe-icon-social.ttf?-96eskg') format('truetype'),
+		url('fonts/Pe-icon-social.svg?-96eskg#Pe-icon-social') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="pe-so-"], [class*=" pe-so-"] {
+	display: inline-block;
+	font-family: 'Pe-icon-social';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.pe-so-github:before {
+	content: "\e61e";
+}
+.pe-so-google-drive:before {
+	content: "\e61f";
+}
+.pe-so-google-plus:before {
+	content: "\e620";
+}
+.tab-content{
+	padding: 4px;
+}

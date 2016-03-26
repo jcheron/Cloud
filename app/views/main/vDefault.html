@@ -1,0 +1,32 @@
+	<div class="well well-lg">
+		<div id="main">
+			<fieldset>
+				<legend>Interface provisoire de test</legend>
+				<a class="btn btn-link" href="Index" data-ajax="Index">Accueil</a>
+				<a class="btn btn-default" href="Users" data-ajax="Users">Utilisateurs</a>
+				<a class="btn btn-default" href="Services" data-ajax="Services">Services</a>
+				<a class="btn btn-default" href="Disques" data-ajax="Disques">Disques</a>
+				<a class="btn btn-default" href="Tarifs" data-ajax="Tarifs">Tarifs</a>
+				<a class="btn btn-default" href="Historiques" data-ajax="Historiques">Historiques</a>
+			</fieldset>
+			<fieldset>
+				<legend>A implémenter (avec connexion Client nécessaire)</legend>
+				<a class="btn btn-primary" href="MyDisques" data-ajax="MyDisques">Mes disques <span class="label label-info">//TODO 1.1</span></a>
+				<a class="btn btn-info" href="Scan/show/1" data-ajax="Scan/show/1">Disque Datas (id=1) <span class="label label-primary">//TODO 1.2</span></a>
+				<a class="btn btn-success" href="Disques/create" data-ajax="Disques/create">Créer un disque <span class="label label-primary">//TODO 1.3</span></a>
+			</fieldset>
+			<fieldset>
+				<legend>A implémenter (avec connexion Admin nécessaire)</legend>
+				<a class="btn btn-primary" href="Admin" data-ajax="Admin">Administration <span class="label label-info">//TODO 2.1</span></a>
+				<a class="btn btn-primary" href="Admin/users" data-ajax="Admin/users">Utilisateurs <span class="label label-info">//TODO 2.2</span></a>
+				<a class="btn btn-primary" href="Admin/disques" data-ajax="Admin/disques">Disques <span class="label label-info">//TODO 2.3</span></a>
+			</fieldset>
+			<fieldset>
+				<legend>Connexion</legend>
+					<a class="btn btn-default" href="Accueil/asAdmin">Connexion en tant qu'admin</a>
+					<a class="btn btn-default" href="Accueil/asUser">Connexion en tant que client</a>
+					<a class="btn btn-warning" href="Accueil/disconnect">Déconnexion</a>
+			</fieldset>
+		</div>
+		<div id="response"></div>
+	</div>
