@@ -33,7 +33,7 @@ class Tarif extends \Base {
 	public function toString() {
 		return "prix : ".
     	sprintf('%01.2f', $this->prix)."&euro;, Marge de dépassement : ".
-    	sprintf('%01.2f',$this->margeDepassement*100)."%, coût dépassement : ".
+    	sprintf('%01.2f',$this->margeDepassement*100)."%, coût : ".
     	sprintf('%01.2f', $this->coutDepassement)."&euro;";
 	}
 

@@ -2,8 +2,8 @@
 /**
  * Classe de gestion de l'authentification
  * @author jcheron
- * @version 1.1
- * @package helpdesk.my
+ * @version 1.2
+ * @package cloud.my
  */
 class Auth {
 	/**

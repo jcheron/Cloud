@@ -3,10 +3,10 @@ use micro\orm\DAO;
 use micro\utils\RequestUtils;
 use micro\controllers\Controller;
 /**
- * Classe de base des contrôleurs Helpdesk
+ * Classe de base des contrôleurs Cloud pour CRUD
  * @author jcheron
- * @version 1.1
- * @package helpdesk.controllers
+ * @version 1.2
+ * @package cloud.controllers
  */
 class _DefaultController extends Controller {
 	/**
@@ -130,8 +130,17 @@ class _DefaultController extends Controller {
 					$msg=new DisplayedMessage("Impossible d'ajouter l'instance de ".$this->model,"danger");
 				}
 			}
-			$this->forward(get_class($this),"index",$msg);
+			$this->_postUpdateAction($msg);
 		}
+	}
+
+	/**
+	 * Action à exécuter après update
+	 * par défaut forward vers l'index du contrôleur en cours
+	 * @param array $params
+	 */
+	protected function _postUpdateAction($params){
+		$this->forward(get_class($this),"index",$params);
 	}
 
 	/**

@@ -1,5 +1,11 @@
 <?php
 use micro\orm\DAO;
+/**
+ * Classe utilitaire liée aux models
+ * @author jcheron
+ * @version 1.1
+ * @package cloud.my
+ */
 class ModelUtils {
 	/**
 	 * Retourne l'occupation de $disque du jour trouvée dans l'historique
@@ -8,8 +14,11 @@ class ModelUtils {
 	 * @return int occupation de $disque
 	 */
 	public static function getDisqueOccupation($cloud,$disque){
+		$result=0;
 		$histo=DirectoryUtils::updateDaySize($cloud,$disque);
-		return $histo->getOccupation();
+		if($histo instanceof Historique)
+			$result=$histo->getOccupation();
+		return $result;
 	}
 
 	/**
@@ -22,9 +31,11 @@ class ModelUtils {
 		$dTarifs=$disque->getDisqueTarifs();
 		$lastDate=0;
 		$result=null;
-		foreach ($dTarifs as $dTarif){
-			if($dTarif->getStartDate()>$lastDate)
-				$result=$dTarif->getTarif();
+		if(sizeof($dTarifs)>0){
+			foreach ($dTarifs as $dTarif){
+				if($dTarif->getStartDate()>$lastDate)
+					$result=$dTarif->getTarif();
+			}
 		}
 		return $result;
 	}

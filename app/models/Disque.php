@@ -15,7 +15,7 @@ class Disque extends Base{
 	private $utilisateur;
 
 	/**
-	 * @OneToMany(mappedBy="tarif",className="DisqueTarif")
+	 * @OneToMany(mappedBy="disque",className="DisqueTarif")
 	 */
 	private $disqueTarifs;
 
@@ -76,6 +76,31 @@ class Disque extends Base{
 		return $this;
 	}
 
+	public function getSize(){
+		 $result= ModelUtils::getDisqueOccupation($GLOBALS["config"]["cloud"],$this);
+		 return $result;
+	}
+
+	public function getTarif(){
+		return ModelUtils::getDisqueTarif($this);
+	}
+
+	public function getQuota(){
+		$result=0.1;
+		$tarif=$this->getTarif();
+		if($tarif!=null)
+			$result=ModelUtils::sizeConverter($tarif->getUnite())*$tarif->getQuota();
+		return $result;
+	}
+
+	public function getOccupation(){
+		return round($this->getSize()/$this->getQuota()*100,2);
+	}
+
+	public function setDisqueTarifs($disqueTarifs) {
+		$this->disqueTarifs=$disqueTarifs;
+		return $this;
+	}
 
 
 

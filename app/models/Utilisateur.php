@@ -17,6 +17,11 @@ class Utilisateur extends Base{
 	private $admin=false;
 	private $createdAt;
 
+	/**
+	 * @OneToMany(mappedBy="utilisateur",className="Disque")
+	 */
+	private $disques;
+
 	public function getId() {
 		return $this->id;
 	}
@@ -88,6 +93,16 @@ class Utilisateur extends Base{
 		$this->createdAt=$createdAt;
 		return $this;
 	}
+
+	public function getDisques() {
+		return $this->disques;
+	}
+
+	public function setDisques($disques) {
+		$this->disques=$disques;
+		return $this;
+	}
+
 
 
 }

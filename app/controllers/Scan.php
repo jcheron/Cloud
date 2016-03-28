@@ -1,10 +1,21 @@
 <?php
 use micro\js\Jquery;
+/**
+ * Contrôleur permettant d'afficher/gérer 1 disque
+ * @author jcheron
+ * @version 1.1
+ * @package cloud.controllers
+ */
 class Scan extends BaseController {
 
 	public function index(){
 
 	}
+
+	/**
+	 * Affiche un disque
+	 * @param int $idDisque
+	 */
 	public function show($idDisque) {
 		$diskName="Datas";
 		$this->loadView("scan/vFolder.html");
@@ -55,6 +66,9 @@ class Scan extends BaseController {
 		exit;
 	}
 
+	/**
+	 * Supprime le fichier dont le nom est fourni dans la clé toDelete du $_POST
+	 */
 	public function delete(){
 		if(array_key_exists("toDelete", $_POST)){
 			foreach ($_POST["toDelete"] as $f){
@@ -66,6 +80,9 @@ class Scan extends BaseController {
 		}
 	}
 
+	/**
+	 * Crée le dossier dont le nom est fourni dans la clé folderName du $_POST
+	 */
 	public function createFolder(){
 		if(array_key_exists("folderName", $_POST)){
 			$pathname=$_POST["activeFolder"].DIRECTORY_SEPARATOR.$_POST["folderName"];

@@ -30,5 +30,29 @@ class StrUtils {
 	public static function isNotNull($s){
 		return (isset($s) && NULL!==$s && ""!==$s);
 	}
+
+	public static function pluralize($count,$caption,$plural=NULL){
+		if($plural==NULL){
+			$pluralChar="s";
+			if(self::endswith($caption, "au")){
+				$pluralChar="x";
+			}
+			$plural=$caption.$pluralChar;
+		}
+		$result=$caption;
+		switch ($count){
+			case 0:
+				$result="aucun ".$caption;
+				break;
+			case 1:
+				$result=$count." ".$caption;
+				break;
+			default:
+				$result=$count." ".$plural;
+				break;
+		}
+		return $result;
+
+	}
 }
 
