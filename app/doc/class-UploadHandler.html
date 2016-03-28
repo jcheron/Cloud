@@ -1,0 +1,2178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class UploadHandler | Micro-Framework &amp; RT-Cloud</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?49f43d3208c5d7e33fa16d36107a345bf11cc00d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Micro-Framework &amp; RT-Cloud</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-None.html" title="Summary of None"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+
+
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li>
+						<a href="namespace-micro.html">
+							micro<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-micro.annotations.html">
+							annotations						</a>
+							</li>
+					<li>
+						<a href="namespace-micro.controllers.html">
+							controllers						</a>
+							</li>
+					<li>
+						<a href="namespace-micro.db.html">
+							db						</a>
+							</li>
+					<li>
+						<a href="namespace-micro.js.html">
+							js						</a>
+							</li>
+					<li>
+						<a href="namespace-micro.orm.html">
+							orm						</a>
+							</li>
+					<li>
+						<a href="namespace-micro.utils.html">
+							utils						</a>
+							</li>
+								</ul></li>
+					<li class="active">
+						<a href="namespace-None.html">
+							None						</a>
+							</li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-_DefaultController.html">_DefaultController</a></li>
+				<li><a href="class-Accueil.html">Accueil</a></li>
+				<li><a href="class-Admin.html">Admin</a></li>
+				<li><a href="class-Auth.html">Auth</a></li>
+				<li><a href="class-AuthProvider.html">AuthProvider</a></li>
+				<li><a href="class-Base.html">Base</a></li>
+				<li><a href="class-BaseController.html">BaseController</a></li>
+				<li><a href="class-Column.html">Column</a></li>
+				<li><a href="class-DirectoryUtils.html">DirectoryUtils</a></li>
+				<li><a href="class-DisplayedMessage.html">DisplayedMessage</a></li>
+				<li><a href="class-Disque.html">Disque</a></li>
+				<li><a href="class-Disques.html">Disques</a></li>
+				<li><a href="class-DisqueTarif.html">DisqueTarif</a></li>
+				<li><a href="class-Historique.html">Historique</a></li>
+				<li><a href="class-Histos.html">Histos</a></li>
+				<li><a href="class-Id.html">Id</a></li>
+				<li><a href="class-JoinColumn.html">JoinColumn</a></li>
+				<li><a href="class-JoinTable.html">JoinTable</a></li>
+				<li><a href="class-ManyToMany.html">ManyToMany</a></li>
+				<li><a href="class-ManyToOne.html">ManyToOne</a></li>
+				<li><a href="class-ModelUtils.html">ModelUtils</a></li>
+				<li><a href="class-MyDisques.html">MyDisques</a></li>
+				<li><a href="class-OneToMany.html">OneToMany</a></li>
+				<li><a href="class-Scan.html">Scan</a></li>
+				<li><a href="class-Service.html">Service</a></li>
+				<li><a href="class-Table.html">Table</a></li>
+				<li><a href="class-Tarif.html">Tarif</a></li>
+				<li><a href="class-Transient.html">Transient</a></li>
+				<li class="active"><a href="class-UploadHandler.html">UploadHandler</a></li>
+				<li><a href="class-Users.html">Users</a></li>
+				<li><a href="class-Utilisateur.html">Utilisateur</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class UploadHandler</h1>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		
+
+			<b>Located at</b> <a href="source-class-UploadHandler.html#13-1388" title="Go to source code">libraries/UploadHandler.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-UploadHandler.html#43-172" title="Go to source code">__construct</a>( <span> <var>$options</var> = <span class="php-keyword1">null</span></span>, <span> <var>$initialize</var> = <span class="php-keyword1">true</span></span>, <span> <var>$error_messages</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="initialize" id="_initialize">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_initialize">#</a>
+			<code><a href="source-class-UploadHandler.html#174-194" title="Go to source code">initialize</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_full_url" id="_get_full_url">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_full_url">#</a>
+			<code><a href="source-class-UploadHandler.html#196-207" title="Go to source code">get_full_url</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_user_id" id="_get_user_id">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_user_id">#</a>
+			<code><a href="source-class-UploadHandler.html#209-212" title="Go to source code">get_user_id</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_user_path" id="_get_user_path">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_user_path">#</a>
+			<code><a href="source-class-UploadHandler.html#214-219" title="Go to source code">get_user_path</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_upload_path" id="_get_upload_path">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_upload_path">#</a>
+			<code><a href="source-class-UploadHandler.html#221-234" title="Go to source code">get_upload_path</a>( <span> <var>$file_name</var> = <span class="php-keyword1">null</span></span>, <span> <var>$version</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_query_separator" id="_get_query_separator">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_query_separator">#</a>
+			<code><a href="source-class-UploadHandler.html#236-238" title="Go to source code">get_query_separator</a>( <span> <var>$url</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_download_url" id="_get_download_url">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_download_url">#</a>
+			<code><a href="source-class-UploadHandler.html#240-262" title="Go to source code">get_download_url</a>( <span> <var>$file_name</var></span>, <span> <var>$version</var> = <span class="php-keyword1">null</span></span>, <span> <var>$direct</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="set_additional_file_properties" id="_set_additional_file_properties">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_set_additional_file_properties">#</a>
+			<code><a href="source-class-UploadHandler.html#264-276" title="Go to source code">set_additional_file_properties</a>( <span> <var>$file</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="fix_integer_overflow" id="_fix_integer_overflow">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_fix_integer_overflow">#</a>
+			<code><a href="source-class-UploadHandler.html#280-285" title="Go to source code">fix_integer_overflow</a>( <span> <var>$size</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_file_size" id="_get_file_size">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_file_size">#</a>
+			<code><a href="source-class-UploadHandler.html#287-296" title="Go to source code">get_file_size</a>( <span> <var>$file_path</var></span>, <span> <var>$clear_stat_cache</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="is_valid_file_object" id="_is_valid_file_object">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_is_valid_file_object">#</a>
+			<code><a href="source-class-UploadHandler.html#298-304" title="Go to source code">is_valid_file_object</a>( <span> <var>$file_name</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_file_object" id="_get_file_object">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_file_object">#</a>
+			<code><a href="source-class-UploadHandler.html#306-328" title="Go to source code">get_file_object</a>( <span> <var>$file_name</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_file_objects" id="_get_file_objects">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_file_objects">#</a>
+			<code><a href="source-class-UploadHandler.html#330-339" title="Go to source code">get_file_objects</a>( <span> <var>$iteration_method</var> = <span class="php-quote">'get_file_object'</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="count_file_objects" id="_count_file_objects">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_count_file_objects">#</a>
+			<code><a href="source-class-UploadHandler.html#341-343" title="Go to source code">count_file_objects</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_error_message" id="_get_error_message">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_error_message">#</a>
+			<code><a href="source-class-UploadHandler.html#345-348" title="Go to source code">get_error_message</a>( <span> <var>$error</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_config_bytes" id="_get_config_bytes">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_config_bytes">#</a>
+			<code><a href="source-class-UploadHandler.html#350-362" title="Go to source code">get_config_bytes</a>( <span> <var>$val</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="validate" id="_validate">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_validate">#</a>
+			<code><a href="source-class-UploadHandler.html#364-447" title="Go to source code">validate</a>( <span> <var>$uploaded_file</var></span>, <span> <var>$file</var></span>, <span> <var>$error</var></span>, <span> <var>$index</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="upcount_name_callback" id="_upcount_name_callback">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_upcount_name_callback">#</a>
+			<code><a href="source-class-UploadHandler.html#449-453" title="Go to source code">upcount_name_callback</a>( <span> <var>$matches</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="upcount_name" id="_upcount_name">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_upcount_name">#</a>
+			<code><a href="source-class-UploadHandler.html#455-462" title="Go to source code">upcount_name</a>( <span> <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_unique_filename" id="_get_unique_filename">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_unique_filename">#</a>
+			<code><a href="source-class-UploadHandler.html#464-479" title="Go to source code">get_unique_filename</a>( <span> <var>$file_path</var></span>, <span> <var>$name</var></span>, <span> <var>$size</var></span>, <span> <var>$type</var></span>, <span> <var>$error</var></span>, <span> <var>$index</var></span>, <span> <var>$content_range</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="fix_file_extension" id="_fix_file_extension">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_fix_file_extension">#</a>
+			<code><a href="source-class-UploadHandler.html#481-513" title="Go to source code">fix_file_extension</a>( <span> <var>$file_path</var></span>, <span> <var>$name</var></span>, <span> <var>$size</var></span>, <span> <var>$type</var></span>, <span> <var>$error</var></span>, <span> <var>$index</var></span>, <span> <var>$content_range</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="trim_file_name" id="_trim_file_name">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_trim_file_name">#</a>
+			<code><a href="source-class-UploadHandler.html#515-526" title="Go to source code">trim_file_name</a>( <span> <var>$file_path</var></span>, <span> <var>$name</var></span>, <span> <var>$size</var></span>, <span> <var>$type</var></span>, <span> <var>$error</var></span>, <span> <var>$index</var></span>, <span> <var>$content_range</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_file_name" id="_get_file_name">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_file_name">#</a>
+			<code><a href="source-class-UploadHandler.html#528-542" title="Go to source code">get_file_name</a>( <span> <var>$file_path</var></span>, <span> <var>$name</var></span>, <span> <var>$size</var></span>, <span> <var>$type</var></span>, <span> <var>$error</var></span>, <span> <var>$index</var></span>, <span> <var>$content_range</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_scaled_image_file_paths" id="_get_scaled_image_file_paths">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_scaled_image_file_paths">#</a>
+			<code><a href="source-class-UploadHandler.html#544-556" title="Go to source code">get_scaled_image_file_paths</a>( <span> <var>$file_name</var></span>, <span> <var>$version</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="gd_get_image_object" id="_gd_get_image_object">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_gd_get_image_object">#</a>
+			<code><a href="source-class-UploadHandler.html#558-564" title="Go to source code">gd_get_image_object</a>( <span> <var>$file_path</var></span>, <span> <var>$func</var></span>, <span> <var>$no_cache</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="gd_set_image_object" id="_gd_set_image_object">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_gd_set_image_object">#</a>
+			<code><a href="source-class-UploadHandler.html#566-569" title="Go to source code">gd_set_image_object</a>( <span> <var>$file_path</var></span>, <span> <var>$image</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="gd_destroy_image_object" id="_gd_destroy_image_object">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_gd_destroy_image_object">#</a>
+			<code><a href="source-class-UploadHandler.html#571-574" title="Go to source code">gd_destroy_image_object</a>( <span> <var>$file_path</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="gd_imageflip" id="_gd_imageflip">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_gd_imageflip">#</a>
+			<code><a href="source-class-UploadHandler.html#576-616" title="Go to source code">gd_imageflip</a>( <span> <var>$image</var></span>, <span> <var>$mode</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="gd_orient_image" id="_gd_orient_image">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_gd_orient_image">#</a>
+			<code><a href="source-class-UploadHandler.html#618-673" title="Go to source code">gd_orient_image</a>( <span> <var>$file_path</var></span>, <span> <var>$src_img</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="gd_create_scaled_image" id="_gd_create_scaled_image">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_gd_create_scaled_image">#</a>
+			<code><a href="source-class-UploadHandler.html#675-784" title="Go to source code">gd_create_scaled_image</a>( <span> <var>$file_name</var></span>, <span> <var>$version</var></span>, <span> <var>$options</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="imagick_get_image_object" id="_imagick_get_image_object">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_imagick_get_image_object">#</a>
+			<code><a href="source-class-UploadHandler.html#786-799" title="Go to source code">imagick_get_image_object</a>( <span> <var>$file_path</var></span>, <span> <var>$no_cache</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="imagick_set_image_object" id="_imagick_set_image_object">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_imagick_set_image_object">#</a>
+			<code><a href="source-class-UploadHandler.html#801-804" title="Go to source code">imagick_set_image_object</a>( <span> <var>$file_path</var></span>, <span> <var>$image</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="imagick_destroy_image_object" id="_imagick_destroy_image_object">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_imagick_destroy_image_object">#</a>
+			<code><a href="source-class-UploadHandler.html#806-809" title="Go to source code">imagick_destroy_image_object</a>( <span> <var>$file_path</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="imagick_orient_image" id="_imagick_orient_image">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_imagick_orient_image">#</a>
+			<code><a href="source-class-UploadHandler.html#811-843" title="Go to source code">imagick_orient_image</a>( <span> <var>$image</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="imagick_create_scaled_image" id="_imagick_create_scaled_image">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_imagick_create_scaled_image">#</a>
+			<code><a href="source-class-UploadHandler.html#845-923" title="Go to source code">imagick_create_scaled_image</a>( <span> <var>$file_name</var></span>, <span> <var>$version</var></span>, <span> <var>$options</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="imagemagick_create_scaled_image" id="_imagemagick_create_scaled_image">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_imagemagick_create_scaled_image">#</a>
+			<code><a href="source-class-UploadHandler.html#925-967" title="Go to source code">imagemagick_create_scaled_image</a>( <span> <var>$file_name</var></span>, <span> <var>$version</var></span>, <span> <var>$options</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_image_size" id="_get_image_size">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_image_size">#</a>
+			<code><a href="source-class-UploadHandler.html#969-1002" title="Go to source code">get_image_size</a>( <span> <var>$file_path</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="create_scaled_image" id="_create_scaled_image">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_create_scaled_image">#</a>
+			<code><a href="source-class-UploadHandler.html#1004-1012" title="Go to source code">create_scaled_image</a>( <span> <var>$file_name</var></span>, <span> <var>$version</var></span>, <span> <var>$options</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="destroy_image_object" id="_destroy_image_object">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_destroy_image_object">#</a>
+			<code><a href="source-class-UploadHandler.html#1014-1018" title="Go to source code">destroy_image_object</a>( <span> <var>$file_path</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="is_valid_image_file" id="_is_valid_image_file">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_is_valid_image_file">#</a>
+			<code><a href="source-class-UploadHandler.html#1020-1029" title="Go to source code">is_valid_image_file</a>( <span> <var>$file_path</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="handle_image_file" id="_handle_image_file">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_handle_image_file">#</a>
+			<code><a href="source-class-UploadHandler.html#1031-1053" title="Go to source code">handle_image_file</a>( <span> <var>$file_path</var></span>, <span> <var>$file</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="handle_file_upload" id="_handle_file_upload">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_handle_file_upload">#</a>
+			<code><a href="source-class-UploadHandler.html#1055-1106" title="Go to source code">handle_file_upload</a>( <span> <var>$uploaded_file</var></span>, <span> <var>$name</var></span>, <span> <var>$size</var></span>, <span> <var>$type</var></span>, <span> <var>$error</var></span>, <span> <var>$index</var> = <span class="php-keyword1">null</span></span>, <span> <var>$content_range</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="readfile" id="_readfile">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_readfile">#</a>
+			<code><a href="source-class-UploadHandler.html#1108-1122" title="Go to source code">readfile</a>( <span> <var>$file_path</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="body" id="_body">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_body">#</a>
+			<code><a href="source-class-UploadHandler.html#1124-1126" title="Go to source code">body</a>( <span> <var>$str</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="header" id="_header">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_header">#</a>
+			<code><a href="source-class-UploadHandler.html#1128-1130" title="Go to source code">header</a>( <span> <var>$str</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_upload_data" id="_get_upload_data">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_upload_data">#</a>
+			<code><a href="source-class-UploadHandler.html#1132-1134" title="Go to source code">get_upload_data</a>( <span> <var>$id</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_post_param" id="_get_post_param">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_post_param">#</a>
+			<code><a href="source-class-UploadHandler.html#1136-1138" title="Go to source code">get_post_param</a>( <span> <var>$id</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_query_param" id="_get_query_param">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_query_param">#</a>
+			<code><a href="source-class-UploadHandler.html#1140-1142" title="Go to source code">get_query_param</a>( <span> <var>$id</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_server_var" id="_get_server_var">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_server_var">#</a>
+			<code><a href="source-class-UploadHandler.html#1144-1146" title="Go to source code">get_server_var</a>( <span> <var>$id</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="handle_form_data" id="_handle_form_data">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_handle_form_data">#</a>
+			<code><a href="source-class-UploadHandler.html#1148-1150" title="Go to source code">handle_form_data</a>( <span> <var>$file</var></span>, <span> <var>$index</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_version_param" id="_get_version_param">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_version_param">#</a>
+			<code><a href="source-class-UploadHandler.html#1152-1154" title="Go to source code">get_version_param</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_singular_param_name" id="_get_singular_param_name">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_singular_param_name">#</a>
+			<code><a href="source-class-UploadHandler.html#1156-1158" title="Go to source code">get_singular_param_name</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_file_name_param" id="_get_file_name_param">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_file_name_param">#</a>
+			<code><a href="source-class-UploadHandler.html#1160-1163" title="Go to source code">get_file_name_param</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_file_names_params" id="_get_file_names_params">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_file_names_params">#</a>
+			<code><a href="source-class-UploadHandler.html#1165-1174" title="Go to source code">get_file_names_params</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_file_type" id="_get_file_type">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_file_type">#</a>
+			<code><a href="source-class-UploadHandler.html#1176-1188" title="Go to source code">get_file_type</a>( <span> <var>$file_path</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="download" id="_download">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_download">#</a>
+			<code><a href="source-class-UploadHandler.html#1190-1230" title="Go to source code">download</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="send_content_type_header" id="_send_content_type_header">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_send_content_type_header">#</a>
+			<code><a href="source-class-UploadHandler.html#1232-1239" title="Go to source code">send_content_type_header</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="send_access_control_headers" id="_send_access_control_headers">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_send_access_control_headers">#</a>
+			<code><a href="source-class-UploadHandler.html#1241-1249" title="Go to source code">send_access_control_headers</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="generate_response" id="_generate_response">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_generate_response">#</a>
+			<code><a href="source-class-UploadHandler.html#1251-1273" title="Go to source code">generate_response</a>( <span> <var>$content</var></span>, <span> <var>$print_response</var> = <span class="php-keyword1">true</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_response" id="_get_response">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_response">#</a>
+			<code><a href="source-class-UploadHandler.html#1275-1277" title="Go to source code">get_response</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="head" id="_head">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_head">#</a>
+			<code><a href="source-class-UploadHandler.html#1279-1289" title="Go to source code">head</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get" id="_get">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get">#</a>
+			<code><a href="source-class-UploadHandler.html#1291-1306" title="Go to source code">get</a>( <span> <var>$print_response</var> = <span class="php-keyword1">true</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="post" id="_post">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_post">#</a>
+			<code><a href="source-class-UploadHandler.html#1308-1362" title="Go to source code">post</a>( <span> <var>$print_response</var> = <span class="php-keyword1">true</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="delete" id="_delete">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_delete">#</a>
+			<code><a href="source-class-UploadHandler.html#1364-1386" title="Go to source code">delete</a>( <span> <var>$print_response</var> = <span class="php-keyword1">true</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Properties summary</h2></div>
+			<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="options" id="$options">
+			<td class="attributes"><code>
+				protected  
+				
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-UploadHandler.html#16" title="Go to source code"><var>$options</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$options" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="error_messages" id="$error_messages">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-UploadHandler.html#20-39" title="Go to source code"><var>$error_messages</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$error_messages" class="anchor">#</a>
+					<code><span class="php-keyword1">array</span>(
+    <span class="php-num">1</span> =&gt; <span class="php-quote">'The uploaded file exceeds the upload_max_filesize directive in php.ini'</span>,
+    <span class="php-num">2</span> =&gt; <span class="php-quote">'The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form'</span>,
+    <span class="php-num">3</span> =&gt; <span class="php-quote">'The uploaded file was only partially uploaded'</span>,
+    <span class="php-num">4</span> =&gt; <span class="php-quote">'No file was uploaded'</span>,
+    <span class="php-num">6</span> =&gt; <span class="php-quote">'Missing a temporary folder'</span>,
+    <span class="php-num">7</span> =&gt; <span class="php-quote">'Failed to write file to disk'</span>,
+    <span class="php-num">8</span> =&gt; <span class="php-quote">'A PHP extension stopped the file upload'</span>,
+    <span class="php-quote">'post_max_size'</span> =&gt; <span class="php-quote">'The uploaded file exceeds the post_max_size directive in php.ini'</span>,
+    <span class="php-quote">'max_file_size'</span> =&gt; <span class="php-quote">'File is too big'</span>,
+    <span class="php-quote">'min_file_size'</span> =&gt; <span class="php-quote">'File is too small'</span>,
+    <span class="php-quote">'accept_file_types'</span> =&gt; <span class="php-quote">'Filetype not allowed'</span>,
+    <span class="php-quote">'max_number_of_files'</span> =&gt; <span class="php-quote">'Maximum number of files exceeded'</span>,
+    <span class="php-quote">'max_width'</span> =&gt; <span class="php-quote">'Image exceeds maximum width'</span>,
+    <span class="php-quote">'min_width'</span> =&gt; <span class="php-quote">'Image requires a minimum width'</span>,
+    <span class="php-quote">'max_height'</span> =&gt; <span class="php-quote">'Image exceeds maximum height'</span>,
+    <span class="php-quote">'min_height'</span> =&gt; <span class="php-quote">'Image requires a minimum height'</span>,
+    <span class="php-quote">'abort'</span> =&gt; <span class="php-quote">'File upload aborted'</span>,
+    <span class="php-quote">'image_resize'</span> =&gt; <span class="php-quote">'Failed to resize image'</span>
+)</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="image_objects" id="$image_objects">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-UploadHandler.html#41" title="Go to source code"><var>$image_objects</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$image_objects" class="anchor">#</a>
+					<code><span class="php-keyword1">array</span>()</code>
+				</div>
+			</td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Micro-Framework &amp; RT-Cloud API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
