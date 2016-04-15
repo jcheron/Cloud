@@ -134,7 +134,7 @@ class DAO {
 	}
 	private static function getSQLForJoinTable($instance,ManyToManyParser $parser){
 		$accessor="get".ucfirst($parser->getPk());
-		$sql="SELECT * FROM `".$parser->getJoinTable()."` WHERE `".$parser->getFkField()."`='".$instance->$accessor()."'";
+		$sql="SELECT * FROM `".$parser->getJoinTable()."` WHERE `".$parser->getMyFkField()."`='".$instance->$accessor()."'";
 		Logger::log("ManyToMany", "Exécution de ".$sql);
 		return DAO::$db->query($sql);
 	}
