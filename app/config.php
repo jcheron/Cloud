@@ -1,6 +1,6 @@
 <?php
 return array(
-		"siteUrl"=>"http://127.0.0.1/RT-Cloud/",
+		"siteUrl"=>"http://127.0.0.1/Cloud/",
 		"documentRoot"=>"Accueil",
 		"database"=>[
 				"dbName"=>"cloud",
