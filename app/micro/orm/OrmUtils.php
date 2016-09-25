@@ -1,7 +1,6 @@
 <?php
 namespace micro\orm;
 
-//include_once 'framework/annotations/ManyToManyParser.php';
 /**
  * Utilitaires de mappage Objet/relationnel
  * @author jc

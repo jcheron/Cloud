@@ -1,12 +1,11 @@
 <?php
 namespace micro\controllers;
 
-use micro\views\engine\TemplateEngine;
-use micro\utils\StrUtils;
+use micro\views\View;
 /**
  * Classe de base des contrôleurs
  * @author jc
- * @version 1.0.0.1
+ * @version 1.0.2
  * @package controllers
  */
 abstract class Controller {
@@ -47,33 +46,9 @@ abstract class Controller {
 	 * @return string
 	 */
 	public function loadView($viewName,$pData="",$asString=false){
-		$config=$GLOBALS["config"];
-		$fileName=ROOT.DS."views/".$viewName;
-		$ext=pathinfo($fileName,PATHINFO_EXTENSION);
-		if($ext==null)
-			$viewName=$viewName.".php";
-		$fileName=ROOT.DS."views/".$viewName;
-		if(file_exists($fileName)){
-			$data=$pData;
-			if(!StrUtils::endswith($fileName, ".php") && @$config["templateEngine"] instanceof TemplateEngine){
-				return $config["templateEngine"]->render($viewName, $pData, $asString);
-			}
-
-			if(is_array($pData)){
-				extract($pData);
-			}
-			if($asString)
-					return $this->includeFileAsString($fileName);
-				else
-					include($fileName);
-		}else{
-			throw new \Exception("Vue inexistante : ".$viewName);
-		}
-	}
-	private function includeFileAsString($file){
-		ob_start();
-		include $file;
-		return ob_get_clean();
+		$view=new View();
+		$view->setVars($pData);
+		return $view->render($viewName,$asString);
 	}
 
 	/**
@@ -101,24 +76,23 @@ abstract class Controller {
 	 * @param mixed $params paramètres passés ) $action
 	 * @param boolean $initialize si vrai, la méthode initialize du contrôleur est appelée avant $action
 	 * @param boolean $finalize si vrai, la méthode finalize du contrôleur est appelée après $action
+	 * @param boolean $asString Si vrai, la vue n'est pas affichée mais retournée sous forme de chaîne (utilisable dans une variable)
 	 * @throws Exception
 	 */
-	public function forward($controller,$action="index",$params=array(),$initialize=false,$finalize=false){
-		try{
-			$obj=new $controller();
-			if($initialize===true){
-				$obj->initialize();
-			}
-			if(method_exists($obj, $action)){
-				$obj->$action($params);
-			}else{
-				throw new \Exception("La méthode `{$action}` n'existe pas sur le contrôleur `{$controller}`");
-			}
-			if($finalize===true){
-				$obj->finalize();
-			}
-		}catch(\Exception $e){
-			echo $e->getMessage();
+	public function forward($controller,$action="index",$params=array(),$initialize=false,$finalize=false,$asString=false){
+		$u=array($controller,$action);
+		if(\is_array($params)){
+			$u=\array_merge($u,$params);
+		}else{
+			$u=\array_merge($u,[$params]);
 		}
+		if($asString===true){
+			\ob_start();
+			Startup::runAction($u,$initialize,$finalize);
+			$result=\ob_get_contents();
+			\ob_end_clean();
+			return $result;
+		}
+		Startup::runAction($u,$initialize,$finalize);
 	}
 }

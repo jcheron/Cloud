@@ -12,5 +12,4 @@ require_once ROOT.'micro/controllers/Autoloader.php';
 require_once ROOT.'./../vendor/autoload.php';
 
 Autoloader::register();
-$application=new Startup();
-$application->run();
+Startup::run();

@@ -2,16 +2,15 @@
 namespace micro\controllers;
 use micro\orm\DAO;
 use micro\utils\StrUtils;
+use micro\log\Logger;
 use micro\controllers\Autoloader;
 use micro\views\engine\TemplateEngine;
-use micro\log\Logger;
 
 class Startup{
-	private $urlParts;
-	public function run(){
-		$config=$GLOBALS["config"];
-		set_error_handler(array($this, 'errorHandler'));
-		$config=$GLOBALS["config"];
+	public static $urlParts;
+	public static function run(){
+		@set_exception_handler(array('Startup', 'errorHandler'));
+		$config=self::getConfig();
 		try {
 			$engineOptions=array('cache' => ROOT.DS."views/cache/");
 			if(array_key_exists("templateEngine", $config)){
@@ -19,8 +18,9 @@ class Startup{
 					$engineOptions=$config["templateEngineOptions"];
 				}
 				$engine=new $config["templateEngine"]($engineOptions);
-				if ($engine instanceof TemplateEngine)
+				if ($engine instanceof TemplateEngine){
 					$GLOBALS["config"]["templateEngine"]=$engine;
+				}
 			}
 		} catch (\Exception $e) {
 			echo $e->getTraceAsString();
@@ -40,9 +40,9 @@ class Startup{
 		}
 		if(StrUtils::endswith($url, "/"))
 			$url=substr($url, 0,strlen($url)-1);
-		$this->urlParts=explode("/", $url);
+		self::$urlParts=explode("/", $url);
 
-		$u=$this->urlParts;
+		$u=self::$urlParts;
 
 		if(class_exists($u[0]) && StrUtils::startswith($u[0],"_")===false){
 			//Construction de l'instance de la classe (1er élément du tableau)
@@ -62,9 +62,20 @@ class Startup{
 			print "Le contrôleur `".$u[0]."` n'existe pas <br/>";
 		}
 	}
+
 	public static function runAction($u,$initialise=true,$finalize=true){
 		$urlSize=sizeof($u);
 		$obj=new $u[0]();
+		$config=self::getConfig();
+		//Dependency injection
+		if(\array_key_exists("di", $config)){
+			$di=$config["di"];
+			if(\is_array($di)){
+				foreach ($di as $k=>$v){
+					$obj->$k=$v();
+				}
+			}
+		}
 		if($initialise)
 			$obj->initialize();
 		try{
@@ -94,7 +105,11 @@ class Startup{
 			$obj->finalize();
 	}
 
-	public function errorHandler($severity, $message, $filename, $lineno) {
+	public static function getConfig(){
+		return $GLOBALS["config"];
+	}
+
+	public static function errorHandler($severity, $message, $filename, $lineno) {
 		if (error_reporting() == 0) {
 			return;
 		}

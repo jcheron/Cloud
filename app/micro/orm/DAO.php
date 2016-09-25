@@ -4,10 +4,6 @@ use micro\annotations\ManyToManyParser;
 use micro\db\SqlUtils;
 use micro\db\Database;
 use micro\log\Logger;
-/*require_once 'framework/Database.php';
-require_once 'framework/Reflexion.php';
-require_once 'framework/OrmUtils.php';
-require_once 'framework/SqlUtils.php';*/
 
 /**
  * Classe passerelle entre base de données et modèle objet
