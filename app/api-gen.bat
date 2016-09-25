@@ -1,1 +1,1 @@
-php c:\xampp2\php\apigen.phar generate -s app -d app\doc --title "Micro-Framework & RT-Cloud" --template-theme bootstrap --skip-doc-path "*\addendum\*" --skip-doc-path "*\log\*" --skip-doc-path "*\views\*" --skip-doc-path "*\database\*" --exclude "*startup.php" --exclude "*config.php"
+php c:\xampp2\php\apigen.phar generate -s app -d app\doc --title "Micro-Framework & Cloud" --template-theme bootstrap --skip-doc-path "*\addendum\*" --skip-doc-path "*\log\*" --skip-doc-path "*\views\*" --skip-doc-path "*\database\*" --exclude "*startup.php" --exclude "*config.php"

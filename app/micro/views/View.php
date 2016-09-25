@@ -5,6 +5,12 @@ use micro\utils\StrUtils;
 use micro\views\engine\TemplateEngine;
 use micro\controllers\Autoloader;
 
+/**
+ * Représente une vue
+ * @author jc
+ * @version 1.0.1
+ * @package controllers
+ */
 class View {
 	private $vars;
 

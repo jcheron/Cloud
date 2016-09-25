@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class micro\controllers\Controller | Micro-Framework &amp; RT-Cloud</title>
+	<title>Class micro\controllers\Controller | Micro-Framework &amp; Cloud</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?49f43d3208c5d7e33fa16d36107a345bf11cc00d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">Micro-Framework &amp; RT-Cloud</a>
+				<a href="index.html" class="navbar-brand">Micro-Framework &amp; Cloud</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -149,8 +149,8 @@
 				<b>Author:</b>
 				jc<br>
 				<b>Version:</b>
-				1.0.0.1<br>
-			<b>Located at</b> <a href="source-class-micro.controllers.Controller.html#6-124" title="Go to source code">micro/controllers/Controller.php</a>
+				1.0.2<br>
+			<b>Located at</b> <a href="source-class-micro.controllers.Controller.html#5-98" title="Go to source code">micro/controllers/Controller.php</a>
 		<br>
 	</div>
 
@@ -170,7 +170,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_index">#</a>
-			<code><a href="source-class-micro.controllers.Controller.html#13-16" title="Go to source code">index</a>( )</code>
+			<code><a href="source-class-micro.controllers.Controller.html#12-15" title="Go to source code">index</a>( )</code>
 
 			<div class="description short">
 				<p>action par défaut</p>
@@ -199,7 +199,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-micro.controllers.Controller.html#17-24" title="Go to source code">__construct</a>( )</code>
+			<code><a href="source-class-micro.controllers.Controller.html#16-23" title="Go to source code">__construct</a>( )</code>
 
 			<div class="description short">
 				<p>Constructeur<br>
@@ -230,7 +230,7 @@ Appelle automatiquement la méthode isValid() pour vérifier l'accès autorisé<
 
 			<td class="name"><div>
 			<a class="anchor" href="#_initialize">#</a>
-			<code><a href="source-class-micro.controllers.Controller.html#26-31" title="Go to source code">initialize</a>( )</code>
+			<code><a href="source-class-micro.controllers.Controller.html#25-30" title="Go to source code">initialize</a>( )</code>
 
 			<div class="description short">
 				<p>Méthode appelée avant chaque action</p>
@@ -259,7 +259,7 @@ Appelle automatiquement la méthode isValid() pour vérifier l'accès autorisé<
 
 			<td class="name"><div>
 			<a class="anchor" href="#_finalize">#</a>
-			<code><a href="source-class-micro.controllers.Controller.html#33-38" title="Go to source code">finalize</a>( )</code>
+			<code><a href="source-class-micro.controllers.Controller.html#32-37" title="Go to source code">finalize</a>( )</code>
 
 			<div class="description short">
 				<p>Méthode appelée après chaque action</p>
@@ -288,7 +288,7 @@ Appelle automatiquement la méthode isValid() pour vérifier l'accès autorisé<
 
 			<td class="name"><div>
 			<a class="anchor" href="#_loadView">#</a>
-			<code><a href="source-class-micro.controllers.Controller.html#40-72" title="Go to source code">loadView</a>( <span>string <var>$viewName</var></span>, <span>mixed <var>$pData</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>boolean <var>$asString</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-micro.controllers.Controller.html#39-52" title="Go to source code">loadView</a>( <span>string <var>$viewName</var></span>, <span>mixed <var>$pData</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>boolean <var>$asString</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Charge la vue $viewName en lui passant éventuellement les variables $pdata</p>
@@ -335,7 +335,7 @@ Si un tableau associatif est passé, la vue récupère des variables du nom des 
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isValid">#</a>
-			<code><a href="source-class-micro.controllers.Controller.html#79-86" title="Go to source code">isValid</a>( )</code>
+			<code><a href="source-class-micro.controllers.Controller.html#54-61" title="Go to source code">isValid</a>( )</code>
 
 			<div class="description short">
 				<p>retourne Vrai si l'accès au contrôleur est autorisé
@@ -370,7 +370,7 @@ A surdéfinir dans les classes dérivées</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_onInvalidControl">#</a>
-			<code><a href="source-class-micro.controllers.Controller.html#88-95" title="Go to source code">onInvalidControl</a>( )</code>
+			<code><a href="source-class-micro.controllers.Controller.html#63-70" title="Go to source code">onInvalidControl</a>( )</code>
 
 			<div class="description short">
 				<p>Appelée si isValid() a retourné faux<br>
@@ -401,7 +401,7 @@ A surdéfinir dans les classes dérivées</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_forward">#</a>
-			<code><a href="source-class-micro.controllers.Controller.html#97-123" title="Go to source code">forward</a>( <span>string <var>$controller</var></span>, <span>string <var>$action</var> = <span class="php-quote">&quot;index&quot;</span></span>, <span>mixed <var>$params</var> = <span class="php-keyword1">array</span>()</span>, <span>boolean <var>$initialize</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$finalize</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-micro.controllers.Controller.html#72-97" title="Go to source code">forward</a>( <span>string <var>$controller</var></span>, <span>string <var>$action</var> = <span class="php-quote">&quot;index&quot;</span></span>, <span>mixed <var>$params</var> = <span class="php-keyword1">array</span>()</span>, <span>boolean <var>$initialize</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$finalize</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$asString</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Charge le contrôleur $controller et appelle sa méthode $action en lui passant les paramètres $params</p>
@@ -423,6 +423,8 @@ A surdéfinir dans les classes dérivées</p>
 						<dd>si vrai, la méthode initialize du contrôleur est appelée avant $action</dd>
 						<dt><var>$finalize</var></dt>
 						<dd>si vrai, la méthode finalize du contrôleur est appelée après $action</dd>
+						<dt><var>$asString</var></dt>
+						<dd>Si vrai, la vue n'est pas affichée mais retournée sous forme de chaîne (utilisable dans une variable)</dd>
 					</dl></div>
 
 
@@ -453,7 +455,7 @@ A surdéfinir dans les classes dérivées</p>
 	</div>
 
 	<div id="footer">
-		Micro-Framework &amp; RT-Cloud API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Micro-Framework &amp; Cloud API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
