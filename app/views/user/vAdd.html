@@ -1,7 +1,7 @@
 <form method="post" action="Users/update">
 <fieldset>
 <legend>Ajouter/modifier un utilisateur</legend>
-<div class="alert alert-info">Utilisateur : {{user.toString()}}</div>
+{{user| raw}}
 <div class="form-group">
 	<input type="hidden" name="id" value="{{user.getId()}}">
 	<input type="mail" name="mail" value="{{user.getMail()}}" placeholder="Entrez l'adresse email" class="form-control" {{disabled}}>

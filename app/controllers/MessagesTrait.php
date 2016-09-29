@@ -10,7 +10,7 @@ trait MessagesTrait {
 	 * @param DisplayedMessage $message
 	 */
 	public function _showDisplayedMessage($message,$asString=false){
-		return $this->_showMessage($message->getContent(),$message->getType(),$message->getTimerInterval(),$message->getDismissable());
+		return $this->_showMessage($message->getContent(),$message->getType(),$message->getTimerInterval(),$message->getDismissable(),true,$asString);
 	}
 	
 	/**
@@ -21,7 +21,11 @@ trait MessagesTrait {
 	 * @param string $dismissable si vrai, l'alert dispose d'une croix de fermeture
 	 */
 	public function _showMessage($message,$type="success",$timerInterval=0,$dismissable=true,$visible=true,$asString=false){
-		return $this->loadView("main/vInfo",array("message"=>$message,"type"=>$type,"dismissable"=>$dismissable,"timerInterval"=>$timerInterval,"visible"=>$visible),$asString);
+		$datas=array(
+				"message"=>$message,"type"=>$type,"dismissable"=>$dismissable,"timerInterval"=>$timerInterval,"visible"=>$visible
+				
+		);
+		return $this->loadView("main/vInfo",$datas,$asString);
 	}
 	
 	/**

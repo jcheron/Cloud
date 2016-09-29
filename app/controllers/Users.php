@@ -16,7 +16,7 @@ class Users extends \_DefaultController {
 	public function frm($id=NULL){
 		$user=$this->getInstance($id);
 		$disabled="";
-		$this->loadView("user/vAdd.html",array("user"=>$user,"disabled"=>$disabled));
+		$this->loadView("user/vAdd.html",array("user"=>$this->messageInfo($user,0,true,true),"disabled"=>$disabled));
 	}
 
 	/* (non-PHPdoc)
