@@ -5,7 +5,12 @@ use micro\utils\StrUtils;
 use micro\log\Logger;
 use micro\controllers\Autoloader;
 use micro\views\engine\TemplateEngine;
-
+/**
+ * Classe de démarrage du framework
+ * @author jc
+ * @version 1.0.1
+ * @package controllers
+ */
 class Startup{
 	public static $urlParts;
 	public static function run(){
@@ -86,7 +91,8 @@ class Startup{
 				case 2:
 					//Appel de la méthode (2ème élément du tableau)
 					if(method_exists($obj, $u[1])){
-						$obj->$u[1]();
+						\call_user_func(array($obj,$u[1]) );
+						//$obj->$u[1]();
 					}else{
 						print "La méthode `{$u[1]}` n'existe pas sur le contrôleur `".$u[0]."`<br/>";
 					}

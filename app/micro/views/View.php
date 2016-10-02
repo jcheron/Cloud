@@ -8,8 +8,8 @@ use micro\controllers\Autoloader;
 /**
  * Représente une vue
  * @author jc
- * @version 1.0.1
- * @package controllers
+ * @version 1.0.2
+ * @package views
  */
 class View {
 	private $vars;
@@ -66,10 +66,13 @@ class View {
 				if(is_array($data)){
 					extract($data);
 				}
-				if($asString)
-					return $this->includeFileAsString($fileName);
-					else
-						include($fileName);
+				if($asString){
+					\ob_start();
+					include ($fileName);
+					return \ob_get_clean();
+				}else{
+					include($fileName);
+				}
 			}else{
 				throw new \Exception("Vue inexistante : ".$viewName);
 			}
