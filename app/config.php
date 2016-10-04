@@ -9,6 +9,7 @@ return array(
 				"user"=>"root",
 				"password"=>""
 		],
+		"debug"=>false,
 		"onStartup"=>function($action){
 		},
 		"directories"=>["libraries"],

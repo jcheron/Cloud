@@ -24,7 +24,7 @@ class Disque extends Base{
 	 * @JoinTable(name="disque_service")
 	 */
 	private $services;
-	
+
 	public function getId() {
 		return $this->id;
 	}
@@ -49,15 +49,6 @@ class Disque extends Base{
 
 	public function setUtilisateur($utilisateur) {
 		$this->utilisateur=$utilisateur;
-		return $this;
-	}
-
-	public function getTarifs() {
-		return $this->tarifs;
-	}
-
-	public function setTarifs($tarifs) {
-		$this->tarifs=$tarifs;
 		return $this;
 	}
 

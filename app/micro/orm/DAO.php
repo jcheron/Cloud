@@ -354,6 +354,7 @@ class DAO {
 			}
 		}
 	}
+
 	/**
 	 * Met à jour $instance dans la base de données.
 	 * Attention de ne pas modifier la clé primaire
