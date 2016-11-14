@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `disque` (
 `id` int(11) NOT NULL,
   `nom` varchar(50) DEFAULT NULL,
   `idUtilisateur` int(11) NOT NULL,
-  `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `createdAt` datetime NOT NULL DEFAULT 0
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
@@ -84,7 +84,7 @@ INSERT INTO `disque_service` (`idDisque`, `idService`) VALUES
 CREATE TABLE IF NOT EXISTS `disque_tarif` (
   `idDisque` int(11) NOT NULL,
   `idTarif` int(11) NOT NULL,
-  `startDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `startDate` datetime NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -205,7 +205,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `prenom` varchar(35) DEFAULT NULL,
   `tel` varchar(10) DEFAULT NULL,
   `admin` tinyint(1) NOT NULL,
-  `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `createdAt` datetime NOT NULL DEFAULT 0
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
