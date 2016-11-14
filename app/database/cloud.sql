@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 29 Mars 2016 à 00:32
+-- Généré le :  Lun 14 Novembre 2016 à 11:23
 -- Version du serveur :  5.6.21
 -- Version de PHP :  5.6.3
 
@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `cloud`
 --
-CREATE DATABASE IF NOT EXISTS `cloud2` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `cloud2`;
+CREATE DATABASE IF NOT EXISTS `cloud` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `cloud`;
 
 -- --------------------------------------------------------
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `disque` (
   `nom` varchar(50) DEFAULT NULL,
   `idUtilisateur` int(11) NOT NULL,
   `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `disque`
@@ -45,7 +45,8 @@ INSERT INTO `disque` (`id`, `nom`, `idUtilisateur`, `createdAt`) VALUES
 (3, 'Jacob datas', 2, '2016-02-15 18:59:58'),
 (4, 'System', 2, '2016-03-26 18:59:58'),
 (6, 'Server web', 2, '2016-03-26 18:59:58'),
-(7, 'Archives', 1, '2015-12-18 18:59:58');
+(7, 'Archives', 1, '2015-12-18 18:59:58'),
+(9, 'test avec tarif', 1, '2016-10-04 12:08:03');
 
 -- --------------------------------------------------------
 
@@ -151,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `service` (
   `nom` varchar(100) NOT NULL,
   `description` text,
   `prix` float(8,2) DEFAULT '0.00'
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `service`
@@ -177,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `tarif` (
   `prix` float(8,2) DEFAULT NULL,
   `unite` set('o','Ko','Mo','Go','To') DEFAULT NULL,
   `margeDepassement` float DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `tarif`
@@ -185,7 +186,9 @@ CREATE TABLE IF NOT EXISTS `tarif` (
 
 INSERT INTO `tarif` (`id`, `quota`, `coutDepassement`, `prix`, `unite`, `margeDepassement`) VALUES
 (1, 200, 0.00, 0.00, 'Ko', 0.02),
-(2, 15, 0.01, 5.00, 'Mo', 0.02);
+(2, 15, 0.01, 5.00, 'Mo', 0.02),
+(3, 400, NULL, NULL, NULL, NULL),
+(4, 200, NULL, 250.00, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -203,7 +206,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `tel` varchar(10) DEFAULT NULL,
   `admin` tinyint(1) NOT NULL,
   `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `utilisateur`
@@ -214,7 +217,9 @@ INSERT INTO `utilisateur` (`id`, `login`, `mail`, `password`, `nom`, `prenom`, `
 (2, 'jAppelbaum', 'jacob.appelbaum@gmail.com', '0000', 'Appelbaum', 'Jacob', NULL, 0, '2016-03-14 19:09:32'),
 (3, 'kdMitnick', 'kd.mitnick@gmail.com', '0123456789', 'Mitnick', 'Kevin David', NULL, 0, '2016-03-28 19:09:32'),
 (4, 'djbernstein', 'djbernstein@gmail.com', 'azertyuiop', 'Bernstein', 'Daniel J.', '1', 1, '2016-03-26 19:09:32'),
-(5, 'linus.torvals', 'linus.torvals@gmail.com', '00000', 'Torvals', 'Linus', NULL, 1, '2016-03-27 19:09:32');
+(5, 'linus.torvals', 'linus.torvals@gmail.com', '00000', 'Torvals', 'Linus', NULL, 1, '2016-03-27 19:09:32'),
+(6, 'oo', 'demo@phalconphp.com', 'phalcon', NULL, NULL, NULL, 0, '2016-09-26 10:44:33'),
+(7, 'eAllman', NULL, 'phalcon', NULL, NULL, NULL, 0, '2016-10-03 11:48:41');
 
 --
 -- Index pour les tables exportées
@@ -270,22 +275,22 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `disque`
 --
 ALTER TABLE `disque`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT pour la table `service`
 --
 ALTER TABLE `service`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT pour la table `tarif`
 --
 ALTER TABLE `tarif`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- Contraintes pour les tables exportées
 --
