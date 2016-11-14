@@ -24,7 +24,7 @@ class Disque extends Base{
 	 * @JoinTable(name="disque_service")
 	 */
 	private $services;
-	
+
 	public function getId() {
 		return $this->id;
 	}
