@@ -16,6 +16,7 @@ before_script:
  - "java -version"
  - "java -jar selenium-server-standalone-2.53.1.jar > /dev/null &"
  - sleep 5
- - php -S 127.0.0.1:8090 app/.htrouter.php &
+ - if [[ "$TRAVIS_PHP_VERSION" = "php*" ]]; then php -S 127.0.0.1:8090 app/.htrouter.php & ; fi
+ - if [[ "$TRAVIS_PHP_VERSION" = "hhv*" ]]; then hhvm -m server -d hhvm.server.port=8090 -d hhvm.server.source_root=app/.htrouter.php & ; fi
  - sleep 5
 script: (cd tests; phpunit --configuration PHPunit.xml --debug)
