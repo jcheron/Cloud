@@ -14,7 +14,7 @@ before_script:
  - "export DISPLAY=:99.0"
  - "wget http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar"
  - "java -version"
- - "java -jar selenium-server-standalone-3.0.1.jar > /dev/null &"
+ - "java -jar selenium-server-standalone-2.53.1.jar > /dev/null &"
  - sleep 5
  - php -S 127.0.0.1:8090 app/.htrouter.php &
  - sleep 5
