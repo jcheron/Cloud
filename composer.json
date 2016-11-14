@@ -1,6 +1,10 @@
 {
-    "require-dev": {},
+    "require-dev": {
+    	"facebook/webdriver": "dev-master"
+    },
     "require": {
-        "twig/twig": "~1.0"
+        "twig/twig": "~1.0",
+		"phpmv/php-mv-ui": "~2.0",
+		"phpunit/phpunit": "~4.8"
     }
 }

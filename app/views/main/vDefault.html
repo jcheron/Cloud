@@ -8,6 +8,8 @@
 				<a class="btn btn-default" href="Disques" data-ajax="Disques">Disques</a>
 				<a class="btn btn-default" href="Tarifs" data-ajax="Tarifs">Tarifs</a>
 				<a class="btn btn-default" href="Historiques" data-ajax="Historiques">Historiques</a>
+				{{q["bt0"] |raw}}
+				{{q["text1"] |raw}}
 			</fieldset>
 			<fieldset>
 				<legend>A implémenter (avec connexion Client nécessaire)</legend>
@@ -30,3 +32,4 @@
 		</div>
 		<div id="response"></div>
 	</div>
+	{{script_foot|raw}}

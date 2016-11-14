@@ -66,6 +66,7 @@ scan=function(folder){
 		// Clicking on folders
 		fileList.on('click', 'li.folders', function(e){
 			e.preventDefault();
+			e.stopPropagation();
 			var nextDir = $(this).find('a.folders').attr('href');
 			if(filemanager.hasClass('searching')) {
 				// Building the breadcrumbs
@@ -251,7 +252,7 @@ scan=function(folder){
 						itemsLength = 'Vide';
 					}
 
-					var folder = $('<li class="folders"><a href="'+ f.path +'" title="'+ f.path +'" class="folders">'+icon+'<span class="name">' + name + '</span> <span class="details">' + itemsLength + '</span></a></li>');
+					var folder = $('<li class="folders"><a href="'+ f.path +'" title="'+ f.path +'" class="folders">'+icon+'<input name="toDelete[]" type="checkbox" value="'+f.path+'" class="toDelete"><span class="name">' + name + '</span> <span class="details">' + itemsLength + '</span></a></li>');
 					folder.appendTo(fileList);
 				});
 
@@ -273,7 +274,7 @@ scan=function(folder){
 					var file = $('<li class="files"><a data-href="'+ f.path+'" title="'+ f.path +'" class="files">'+icon+'<input name="toDelete[]" type="checkbox" value="'+f.path+'" class="toDelete"><span class="name">'+ name +'</span> <span class="details">'+fileSize+'</span></a></li>');
 					file.appendTo(fileList);
 				});
-				$(".toDelete").bind('click',function(event){$('#btDelete').toggle($('.toDelete:checked').length>0)});
+				$(".toDelete").bind('click',function(event){event.stopPropagation();$('#btDelete').toggle($('.toDelete:checked').length>0)});
 			}
 
 

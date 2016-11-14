@@ -72,7 +72,11 @@ class Scan extends BaseController {
 	public function delete(){
 		if(array_key_exists("toDelete", $_POST)){
 			foreach ($_POST["toDelete"] as $f){
-				unlink(realpath($f));
+				if(is_dir($f)){
+					DirectoryUtils::rmDir($f);	
+				}else{
+					unlink(realpath($f));
+				}
 			}
 			echo Jquery::execute("scan()");
 			echo Jquery::doJquery("#panelConfirmDelete", "hide");

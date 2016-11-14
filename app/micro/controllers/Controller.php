@@ -10,6 +10,11 @@ use micro\views\View;
  */
 abstract class Controller {
 	/**
+	 * @var View
+	 */
+	protected $view;
+	/**
+	 * 
 	 * action par défaut
 	 */
 	public abstract function index();
@@ -20,6 +25,7 @@ abstract class Controller {
 	public function __construct(){
 		if(!$this->isValid())
 			$this->onInvalidControl();
+		$this->view=new View();		
 	}
 
 	/**
@@ -45,10 +51,10 @@ abstract class Controller {
 	 * @throws Exception
 	 * @return string
 	 */
-	public function loadView($viewName,$pData="",$asString=false){
-		$view=new View();
-		$view->setVars($pData);
-		return $view->render($viewName,$asString);
+	public function loadView($viewName,$pData=NULL,$asString=false){
+		if(isset($pData))
+			$this->view->setVars($pData);
+		return $this->view->render($viewName,$asString);
 	}
 
 	/**

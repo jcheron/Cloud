@@ -12,4 +12,12 @@ require_once ROOT.'micro/controllers/Autoloader.php';
 require_once ROOT.'./../vendor/autoload.php';
 
 Autoloader::register();
+
+if(file_exists(ROOT.DS."install.php")){
+	include ROOT.DS."install.php";
+	exit;
+}
+
 Startup::run();
+
+//JCHERON

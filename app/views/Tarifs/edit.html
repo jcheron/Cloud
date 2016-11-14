@@ -1,0 +1,6 @@
+<form method="post" action="Tarifs/update">
+	<input type="hidden" id="id" name="id" value="{{tarif.getId()}}">
+	<input class="form-control" type="text" id="quota" name="quota" placeholder="Quota..." value="{{tarif.getQuota()}}">
+	<input class="form-control" type="text" id="prix" name="prix" placeholder="Prix..." value="{{tarif.getPrix()}}">
+	<input class="btn btn-primary" type="submit" value="Valider">
+</form>

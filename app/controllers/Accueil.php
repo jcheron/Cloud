@@ -3,6 +3,8 @@ use micro\orm\DAO;
 use micro\js\Jquery;
 use micro\controllers\Controller;
 use micro\utils\RequestUtils;
+use micro\views\View;
+use Ajax\bootstrap\html\HtmlInput;
 /**
  * Contrôleur par défaut (défini dans config => documentRoot)
  * @author jcheron
@@ -20,7 +22,15 @@ class Accueil extends Controller {
 		if(!$isAjax){
 			$this->loadView("main/vHeader.html",array("infoUser"=>Auth::getInfoUser()));
 		}
+		$bs=$this->jquery->bootstrap();
+		$bt=$bs->htmlButton("bt0","Test Bootstrap");
+		$bt->setProperty("data-ajax","myDisques");
+		$bt->getOnClick("","#main",["attr"=>"data-ajax"]);
+		//$edit=$bs->htmlInput("text1");
+		//$edit->onKeypress("var s=$(this).val();$(this).val(s.replace(/[\x00-\x1F\x7F-\x9F]/g, ''));");
+		$this->jquery->compile($this->view);
 		$this->loadView("main/vDefault.html");
+		
     	Jquery::getOn("click","a[data-ajax]","","#main",array("attr"=>"data-ajax"));
 		echo Jquery::compile();
 		if(!$isAjax){
