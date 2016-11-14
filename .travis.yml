@@ -19,6 +19,7 @@ before_script:
  - "sh -e /etc/init.d/xvfb start"
  - "export DISPLAY=:99.0"
  - "wget http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.0.1.jar"
+ - "java -version"
  - "java -jar selenium-server-standalone-3.0.1.jar > /dev/null &"
  - sleep 5
  - php -S 127.0.0.1:8090 app/.htrouter.php &
