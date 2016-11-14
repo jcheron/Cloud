@@ -7,6 +7,7 @@ php:
   - hhvm
 jdk:
   - oraclejdk8
+sudo: false
 addons:
   firefox: "49.0"
   apt:
