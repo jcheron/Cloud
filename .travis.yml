@@ -20,6 +20,7 @@ before_script:
  - "sh -e /etc/init.d/xvfb start"
  - "export DISPLAY=:99.0"
  - "wget http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.0.1.jar"
+ - jdk_switcher use oraclejdk8
  - "java -version"
  - "java -jar selenium-server-standalone-3.0.1.jar > /dev/null &"
  - sleep 5
