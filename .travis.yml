@@ -20,7 +20,7 @@ before_script:
     php -S 127.0.0.1:8090 app/.htrouter.php &
     fi'
  - 'if [[ "$TRAVIS_PHP_VERSION" = "hhv*" ]]; then
-    hhvm -m server -d hhvm.server.port=8090 -d hhvm.server.source_root=./app/.htrouter.php &
+    hhvm -m server -d hhvm.server.port=8090 -d hhvm.server.source_root=./ -d hhvm.server.default_document=app/.htrouter.php &
     fi'
  - sleep 5
 script: (cd tests; phpunit --configuration PHPunit.xml --debug)
