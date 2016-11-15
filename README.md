@@ -1,4 +1,5 @@
 # Cloud
+[![Build Status](https://travis-ci.org/jcheron/Cloud.svg?branch=master)](https://travis-ci.org/jcheron/Cloud)
 
 sept-oct 2016 project
 #Howto
