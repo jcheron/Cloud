@@ -1,13 +1,9 @@
 language: php
 php:
   - 5.5
-  env: hhvm="false"
   - 5.6
-  env: hhvm="false"
   - 7.0
-  env: hhvm="false"
   - hhvm
-  env: hhvm="true"
 addons:
   firefox: "49.0"
 before_script:
@@ -20,10 +16,10 @@ before_script:
  - "java -version"
  - "java -jar selenium-server-standalone-2.53.1.jar > /dev/null &"
  - sleep 5
- - 'if [[ $hhvm = "false" ]]; then
+ - 'if [[ "$TRAVIS_PHP_VERSION" != "hhv*" ]]; then
     php -S 127.0.0.1:8090 app/.htrouter.php &
     fi'
- - 'if [[ $hhvm = "true" ]]; then
+ - 'if [[ "$TRAVIS_PHP_VERSION" = "hhv*" ]]; then
     hhvm -m server -d hhvm.server.port=8090 -d hhvm.server.source_root=app/.htrouter.php &
     fi'
  - sleep 5
