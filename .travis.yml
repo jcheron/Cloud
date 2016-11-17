@@ -22,4 +22,8 @@ before_script:
     hhvm -m server -d hhvm.server.port=8090 -d hhvm.server.source_root=./ -d hhvm.server.default_document=app/.htrouter.php &
     fi'
  - sleep 5
-script: (cd tests; phpunit --configuration PHPunit.xml --debug)
+script: (cd tests; phpunit --configuration PHPunit.xml --debug --coverage-clover=coverage.xml)
+after_success:
+ - bash <(curl -s https://codecov.io/bash)
+notifications:
+  email: false
