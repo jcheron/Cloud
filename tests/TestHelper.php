@@ -9,5 +9,6 @@ $config=include_once ROOT.DS.'config.php';
 require_once ROOT.'micro/log/Logger.php';
 require_once ROOT.'micro/controllers/Autoloader.php';
 Autoloader::register();
-$_SESSION=[];
+$_SESSION=[];$_COOKIE=[];
+global $_SESSION,$_COOKIE;
 include __DIR__ . "/../vendor/autoload.php";
