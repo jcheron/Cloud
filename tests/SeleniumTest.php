@@ -33,4 +33,8 @@ class SeleniumTest extends \AjaxUnitTest {
 	public function testAsAdmin(){
 		self::get("Accueil/asAdmin");
 	}
+	
+	public function testAdmin(){
+		self::get("Admin");
+	}
 }
