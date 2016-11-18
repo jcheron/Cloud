@@ -76,6 +76,21 @@ abstract class AjaxUnitTest extends UnitTestCase {
     }
 
     /**
+     * click on the element by id and force coverage for the url given by the coverageUrlAttribute attribute
+     * @param string $id
+     * @param string $coverageUrlAttribute
+     */
+    public function click($id,$coverageUrlAttribute="href"){
+    	$elm=$this->getElementById($id);
+    	if(isset($elm)){
+    		$attr=$elm->getAttribute($coverageUrlAttribute);
+    		if(StrUtils::isNotNull($attr))
+    			self::forceCoverage($attr);
+    		$elm->click();
+    	}
+    }
+
+    /**
      * <span class="search_hit">Tests</span> if an element exist
      * @param string $css_selector
      * @return boolean

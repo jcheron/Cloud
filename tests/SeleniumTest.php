@@ -21,10 +21,9 @@ class SeleniumTest extends \AjaxUnitTest {
 	public function testClick(){
 		self::get("Selenium/index");
 		$this->getElementById("text2")->sendKeys("test click");
-		$this->getElementById("btSubmit")->click();
+		$this->click("btSubmit","data-selenium");
 		SeleniumTest::$webDriver->manage()->timeouts()->implicitlyWait(5);
 		$this->assertEquals("test click",$this->getElementById("result")->getText());
-
 	}
 
 	public function testAccueil(){
