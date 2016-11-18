@@ -26,4 +26,12 @@ class SeleniumTest extends \AjaxUnitTest {
 		$this->assertEquals("test click",$this->getElementById("result")->getText());
 
 	}
+
+	public function testAccueil(){
+		self::get("Accueil");
+	}
+
+	public function testAsAdmin(){
+		self::get("Accueil/asAdmin");
+	}
 }

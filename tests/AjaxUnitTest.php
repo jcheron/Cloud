@@ -41,25 +41,29 @@ abstract class AjaxUnitTest extends UnitTestCase {
      * @param string $url
      */
     public static function get($url=""){
+		self::forceCoverage($url);
+        $url=self::$url.$url;
+        self::$webDriver->get($url);
+    }
+
+    private static function forceCoverage($url){
     	if(StrUtils::endswith($url, "/"))
     		$url=substr($url, 0,strlen($url)-1);
     	$urlParts=explode("/", $url);
     	$urlSize=sizeof($urlParts);
     	if($urlSize>0){
-	    	if($urlSize==1){
-	    		$urlParts[]="index";
-	    	}
-	    	try{
-		    	$obj=new $urlParts[0]();
-		    	if(method_exists($obj, $urlParts[1])){
-		    		\call_user_func(array($obj,$urlParts[1]) );
-		    	}
-	    	}catch(Exception $e){
+    		if($urlSize==1){
+    			$urlParts[]="index";
+    		}
+    		try{
+    			$obj=new $urlParts[0]();
+    			if(method_exists($obj, $urlParts[1])){
+    				\call_user_func(array($obj,$urlParts[1]) );
+    			}
+    		}catch(Exception $e){
 
-	    	}
+    		}
     	}
-        $url=self::$url.$url;
-        self::$webDriver->get($url);
     }
 
     /**
