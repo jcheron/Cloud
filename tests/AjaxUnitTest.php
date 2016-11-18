@@ -1,19 +1,20 @@
 <?php
- 
+
+use micro\utils\StrUtils;
 /**
  * Class AjaxUnitTest
  */
 abstract class AjaxUnitTest extends UnitTestCase {
     //use \WebDriverAssertions;
     //use \WebDriverDevelop;
-    
+
     protected static $url = 'http://127.0.0.1:8090/';
     /**
     * @var \RemoteWebDriver
     */
     protected static $webDriver;
- 
- 
+
+
     /* (non-PHPdoc)
      * @see PHPUnit_Framework_TestCase::setUpBeforeClass()
      */
@@ -21,11 +22,11 @@ abstract class AjaxUnitTest extends UnitTestCase {
         $capabilities = array(\WebDriverCapabilityType::BROWSER_NAME => 'firefox',\WebDriverCapabilityType::VERSION=>'49.0');
         self::$webDriver = \RemoteWebDriver::create('http://localhost:4444/wd/hub', $capabilities);
     }
- 
+
     public function setUp() {
         parent::setup();
     }
- 
+
     /* (non-PHPdoc)
      * @see PHPUnit_Framework_TestCase::tearDownAfterClass()
      */
@@ -33,17 +34,34 @@ abstract class AjaxUnitTest extends UnitTestCase {
         if(self::$webDriver!=null)
             self::$webDriver->close();
     }
- 
- 
+
+
     /**
      * Loads the relative url $url in web browser
      * @param string $url
      */
     public static function get($url=""){
+    	if(StrUtils::endswith($url, "/"))
+    		$url=substr($url, 0,strlen($url)-1);
+    	$urlParts=explode("/", $url);
+    	$urlSize=sizeof($urlParts);
+    	if($urlSize>0){
+	    	if($urlSize==1){
+	    		$urlParts[]="index";
+	    	}
+	    	try{
+		    	$obj=new $urlParts[0]();
+		    	if(method_exists($obj, $urlParts[1])){
+		    		\call_user_func(array($obj,$urlParts[1]) );
+		    	}
+	    	}catch(Exception $e){
+
+	    	}
+    	}
         $url=self::$url.$url;
         self::$webDriver->get($url);
     }
- 
+
     /**
      * Returns a given element by id
      * @param string $id HTML id attribute of the element to return
@@ -52,7 +70,7 @@ abstract class AjaxUnitTest extends UnitTestCase {
     public function getElementById($id){
         return self::$webDriver->findElement(\WebDriverBy::id($id));
     }
- 
+
     /**
      * <span class="search_hit">Tests</span> if an element exist
      * @param string $css_selector
@@ -61,7 +79,7 @@ abstract class AjaxUnitTest extends UnitTestCase {
     public function elementExists($css_selector){
         return sizeof($this->getElementsBySelector($css_selector))!==0;
     }
- 
+
     /**
      * Returns a given element by css selector
      * @param string $css_selector
@@ -70,7 +88,7 @@ abstract class AjaxUnitTest extends UnitTestCase {
     public function getElementBySelector($css_selector){
         return self::$webDriver->findElement(\WebDriverBy::cssSelector($css_selector));
     }
- 
+
     /**
      * Returns the given elements by css selector
      * @param string $css_selector
@@ -79,7 +97,7 @@ abstract class AjaxUnitTest extends UnitTestCase {
     public function getElementsBySelector($css_selector){
         return self::$webDriver->findElements(\WebDriverBy::cssSelector($css_selector));
     }
- 
+
     /**
      * Return true if the actual page contains $text
      * @param string $text The text to search for
