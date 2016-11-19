@@ -24,6 +24,7 @@ before_script:
  - sleep 5
 script: (cd tests; phpunit --configuration PHPunit.xml --debug --coverage-clover=coverage.xml)
 after_success:
+ - ./run unittest_tests
  - bash <(curl -s https://codecov.io/bash) -F unittest
 notifications:
   email: false
