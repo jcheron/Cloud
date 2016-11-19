@@ -47,7 +47,7 @@ abstract class AjaxUnitTest extends UnitTestCase {
     }
 
     private static function forceCoverage($url){
-    	if(StrUtils::endswith($url, "/"))
+    	/*if(StrUtils::endswith($url, "/"))
     		$url=substr($url, 0,strlen($url)-1);
     	$urlParts=explode("/", $url);
     	$urlSize=sizeof($urlParts);
@@ -63,7 +63,7 @@ abstract class AjaxUnitTest extends UnitTestCase {
     		}catch(Exception $e){
 
     		}
-    	}
+    	}*/
     }
 
     /**

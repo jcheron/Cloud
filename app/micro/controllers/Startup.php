@@ -30,7 +30,7 @@ class Startup{
 		} catch (\Exception $e) {
 			echo $e->getTraceAsString();
 		}
-		session_start();
+		@session_start();
 		Logger::init();
 		if($config["test"]){
 			$GLOBALS["config"]["siteUrl"]="http://127.0.0.1:8090/";
