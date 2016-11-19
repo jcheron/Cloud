@@ -21,6 +21,6 @@ parsers:
       conditional: true
       loop: true
       macro: false
-      method: false
+      method: true
   javascript:
     enable_partials: true
