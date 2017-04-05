@@ -3,7 +3,7 @@
 [![codecov](https://codecov.io/gh/jcheron/Cloud/branch/master/graph/badge.svg)](https://codecov.io/gh/jcheron/Cloud)
 
 sept-oct 2016 project
-#Howto
+# Howto
 
 - [x] fork your own copy of this repository.
 - [x] Clone the project on your local machine.
