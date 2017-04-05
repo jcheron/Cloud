@@ -2,7 +2,7 @@
 use Ajax\php\micro\JsUtils;
 use Ajax\Bootstrap;
 return array(
-		"siteUrl"=>"http://127.0.0.1/myCloud/",
+		"siteUrl"=>"http://127.0.0.1/Cloud/",
 		"documentRoot"=>"Accueil",
 		"database"=>[
 				"dbName"=>"cloud",
@@ -17,7 +17,7 @@ return array(
 		"directories"=>["libraries"],
 		"templateEngine"=>'micro\views\engine\Twig',
 		"templateEngineOptions"=>array("cache"=>false),
-		"test"=>true,
+		"test"=>false,
 		"cloud"=>array('root'=>'files/',
 				'prefix'=>'srv-'),
 		"di"=>["jquery"=>function(){
